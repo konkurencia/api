@@ -66,3 +66,19 @@ GET /people/{id}/
     "projects": [{ "title": "Web Konkurencie", "shortDescription": "Our web", "mainScreenshot": "/images/projects/project_1.jpg", "url": "/projects/1/"}],
     "social": {"web": "http://urtd.net", "mail": "ondro@konkurencia.eu", "facebook": "http://fb.com/urtd/"}
 }
+
+-- Tags resource --
+---
+Lists all existing tags
+---
+GET /tags/
+> Accept: application/json
+< 200
+< Content-Type: application/json
+{
+    "tags": [
+    {"url": "/tags/1/", "tag": "HTML"},
+    {"url": "/tags/2/", "tag": "PHP"},
+    {"url": "/tags/3/", "tag": "CSS"}
+    ]
+}
