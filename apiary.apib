@@ -50,6 +50,7 @@ GET /people/{?section}
 
 ---
 Returns all details for a person specified by {id}
+The last "social" object contains only populated fields from DB.
 ---
 GET /people/{id}/
 > Accept: application/json
@@ -63,5 +64,5 @@ GET /people/{id}/
     "motto": "Nieto fontu bez pismenok, mudrost pravi.",
     "tags": [{"url": "/tags/1/", "tag": "HTML"}, {"url": "/tags/2/", "tag": "PHP"}, {"url": "/tags/3/", "tag": "CSS"}],
     "projects": [{ "title": "Web Konkurencie", "shortDescription": "Our web", "mainScreenshot": "/images/projects/project_1.jpg", "url": "/projects/1/"}],
-    "web": "http://urtd.net", "mail": "ondro@konkurencia.eu", "facebook": "http://fb.com/urtd/"
+    "social": {"web": "http://urtd.net", "mail": "ondro@konkurencia.eu", "facebook": "http://fb.com/urtd/"}
 }
