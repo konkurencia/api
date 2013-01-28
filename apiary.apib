@@ -33,3 +33,35 @@ GET /projects/{id}/
 "relatedProjects": [{ "title": "Web Konkurencie", "shortDescription": "Our web", "mainScreenshot": "/images/projects/project_1.jpg", "url": "/projects/1/"}]
 "date": "YYYY-MM-DD HH:MM:SS"
 }
+
+-- People resources --
+---
+Lists short details of all people of Konkurencia, or filtered by section (id supported as parameter)
+---
+GET /people/{?section}
+> Accept: application/json
+< 200
+< Content-Type: application/json
+{ "people": [
+    {"name": "Ondrej Job", "url": "/people/1/", "photo": "/images/people/ondro.jpg",
+    "mainSection": {"url": "/sections/1/", "name": "Webdesign"},
+    }
+]}
+
+---
+Returns all details for a person specified by {id}
+---
+GET /people/{id}/
+> Accept: application/json
+< 200
+< Content-Type: application/json
+{
+    "name": "Ondrej Job", "photo": "/images/people/ondro.jpg",
+    "mainSection": {"url": "/sections/1/", "name": "Webdesign"},
+    "sections": [{"url": "/sections/1/", "name": "Webdesign"}, {"url": "/sections/2/", "name": "Design"}],
+    "shortDesc": "Super Awesome Type Designer",
+    "motto": "Nieto fontu bez pismenok, mudrost pravi.",
+    "tags": [{"url": "/tags/1/", "tag": "HTML"}, {"url": "/tags/2/", "tag": "PHP"}, {"url": "/tags/3/", "tag": "CSS"}],
+    "projects": [{ "title": "Web Konkurencie", "shortDescription": "Our web", "mainScreenshot": "/images/projects/project_1.jpg", "url": "/projects/1/"}],
+    "web": "http://urtd.net", "mail": "ondro@konkurencia.eu", "facebook": "http://fb.com/urtd/"
+}
