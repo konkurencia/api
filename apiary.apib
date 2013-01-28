@@ -37,6 +37,7 @@ GET /projects/{id}/
 -- People resources --
 ---
 Lists short details of all people of Konkurencia, or filtered by section (id supported as parameter)
+
 ---
 GET /people/{?section}
 > Accept: application/json
@@ -51,6 +52,7 @@ GET /people/{?section}
 ---
 Returns all details for a person specified by {id}
 The last "social" object contains only populated fields from DB.
+
 ---
 GET /people/{id}/
 > Accept: application/json
@@ -70,6 +72,7 @@ GET /people/{id}/
 -- Tags resource --
 ---
 Lists all existing tags
+
 ---
 GET /tags/
 > Accept: application/json
