@@ -10,6 +10,7 @@ useful for other applications.
 -- Project resources --
 ---
 Lists short details either of all projects, or filtered by section (id supported as parameter)
+
 ---
 GET /projects/{?section}
 > Accept: application/json
@@ -21,6 +22,7 @@ GET /projects/{?section}
 
 ---
 Returns all info about a project specified by {id}.
+
 ---
 GET /projects/{id}/
 > Accept: application/json
@@ -51,6 +53,7 @@ GET /people/{?section}
 
 ---
 Returns all details for a person specified by {id}
+
 The last "social" object contains only populated fields from DB.
 
 ---
