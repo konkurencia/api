@@ -114,3 +114,34 @@ GET /quotes/random/{?section}
 {
     "quote": "Veni, Vidi, Vici"
 }
+
+-- Section resources --
+---
+Lists all resources
+
+---
+GET /sections/
+> Accept: application/json
+< 200
+< Content-Type: application/json
+{
+    "sections": [
+    {"url": "/sections/1/", "name": "Webdesign", "icon": "/images/sections/1.jpg", "description": "webz"},
+    {"url": "/sections/2/", "name": "Design", "icon": "/images/sections/2.jpg", "description": "stuff"}
+    ]
+}
+
+---
+Section details
+
+---
+GET /section/{id}
+> Accept: application/json
+< 200
+< Content-Type: application/json
+{
+    "name": "Webdesign",
+    "icon": "/images/sections/1.jpg",
+    "description": "webz",
+    "motivation": "we do webz da best"
+}
