@@ -46,8 +46,13 @@ GET /people/{?section}
 < 200
 < Content-Type: application/json
 { "people": [
-    {"name": "Ondrej Job", "url": "/people/1/", "photo": "/images/people/ondro.jpg",
-    "mainSection": {"url": "/sections/1/", "name": "Webdesign"},
+    {
+    "name": "Ondrej Job", "url": "/people/1/", "photo": "/images/people/ondro.jpg",
+    "mainSection": {"url": "/sections/1/", "name": "Webdesign"}
+    },
+    {
+    "name": "Matej Zilak", "url": "/people/2/", "photo": "/images/people/teo.jpg",
+    "mainSection": {"url": "/sections/1/", "name": "Webdesign"}
     }
 ]}
 
