@@ -101,3 +101,16 @@ GET /tags/{id}/
     "projects": [{ "title": "Web Konkurencie", "shortDescription": "Our web", "mainScreenshot": "/images/projects/project_1.jpg", "url": "/projects/1/"}],
     "people": [{"name": "Ondrej Job", "url": "/people/1/"}, {"name": "Matej Zilak", "url": "/people/2/"}]
 }
+
+-- Quotes resource --
+---
+Gets random quote for section
+
+---
+GET /quotes/random/{?section}
+> Accept: application/json
+< 200
+< Content-Type: application/json
+{
+    "quote": "Veni, Vidi, Vici"
+}
