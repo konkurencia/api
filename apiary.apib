@@ -132,8 +132,8 @@ GET /sections/
 < Content-Type: application/json
 {
     "sections": [
-    {"url": "/sections/1/", "name": "Webdesign", "icon": "/images/sections/1.jpg", "description": "webz"},
-    {"url": "/sections/2/", "name": "Design", "icon": "/images/sections/2.jpg", "description": "stuff"}
+    {"url": "/sections/1/", "name": "Webdesign", "icon": "A", "description": "webz"},
+    {"url": "/sections/2/", "name": "Design", "icon": "B", "description": "stuff"}
     ]
 }
 
@@ -147,7 +147,7 @@ GET /section/{id}
 < Content-Type: application/json
 {
     "name": "Webdesign",
-    "icon": "/images/sections/1.jpg",
+    "icon": "B",
     "description": "webz",
     "motivation": "we do webz da best"
 }
